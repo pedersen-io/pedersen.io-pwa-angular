@@ -1,6 +1,6 @@
 {
-  "name": "pedersen.io-spa-angular",
-  "short_name": "pedersen.io-spa-angular",
+  "name": "pedersen.io-pwa-angular",
+  "short_name": "pedersen.io-pwa-angular",
   "theme_color": "#1976d2",
   "background_color": "#002878",
   "display": "standalone",
