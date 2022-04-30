@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pedersen.io-pwa-angular": {
+    "pedersen-pwa-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pedersen.io-pwa-angular",
+            "outputPath": "dist/pedersen-pwa-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -78,10 +78,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pedersen.io-pwa-angular:build:production"
+              "browserTarget": "pedersen-pwa-angular:build:production"
             },
             "development": {
-              "browserTarget": "pedersen.io-pwa-angular:build:development"
+              "browserTarget": "pedersen-pwa-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -89,7 +89,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pedersen.io-pwa-angular:build"
+            "browserTarget": "pedersen-pwa-angular:build"
           }
         },
         "test": {
@@ -114,5 +114,5 @@
       }
     }
   },
-  "defaultProject": "pedersen.io-pwa-angular"
+  "defaultProject": "pedersen-pwa-angular"
 }

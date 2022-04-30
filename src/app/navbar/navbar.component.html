@@ -1,29 +1,122 @@
-<mat-tabs mat-sync-route>
-    <mat-tab id="home" mat-label="Home" mat-icon="home" to="/" exact></mat-tab>
-    <mat-tab id="about" mat-label="About" mat-icon="info" to="/about" exact></mat-tab>
-    <mat-tab id="family" mat-label="Family" mat-icon="people" to="/family" exact></mat-tab>
-    <mat-tab id="projects" mat-label="Projects" mat-icon="/assets/icons/hammer.svg"
-        @click="newWindow('https://derekpedersen.github.io/#projects')" exact></mat-tab>
-    <mat-tab id="github" mat-label="Github" mat-icon="/assets/icons/github-box.svg"
-        @click="newWindow('https://github.com/derekpedersen')" exact></mat-tab>
-    <mat-tab id="jenkins" mat-label="Jenkins" mat-icon="/assets/icons/jenkins.svg"
-        @click="newWindow('https://jenkins.pedersen.io')" exact></mat-tab>
-    <mat-tab id="linkedin" mat-label="Linkedin" mat-icon="/assets/icons/linkedin-box.svg"
-        @click="newWindow('https://www.linkedin.com/in/derek-pedersen-67105415/')" exact></mat-tab>
-    <mat-tab id="resume" mat-label="Resume" mat-icon="/assets/icons/file-pdf-box.svg"
-        @click="newWindow('https://derek.pedersen.io/api/resume/download')" exact></mat-tab>
-    <mat-tab id="docker" mat-label="Docker" mat-icon="/assets/icons/docker.svg"
-        @click="newWindow('https://hub.docker.com/u/derekpedersen')" exact></mat-tab>
-    <mat-tab id="stackoverflow" mat-label="Stackoverflow" mat-icon="/assets/icons/stackoverflow.svg" @click="
-        newWindow('https://stackoverflow.com/users/1304353/derek-pedersen')
-      " exact></mat-tab>
-    <mat-tab id="hackerrank" mat-label="Hackerrank" mat-icon="/assets/icons/hackerrank.svg"
-        @click="newWindow('https://www.hackerrank.com/derekpedersen')" exact></mat-tab>
-    <mat-tab id="codefights" mat-label="Codefights" mat-icon="/assets/icons/codefights.svg"
-        @click="newWindow('https://app.codesignal.com/profile/drockem')" exact></mat-tab>
-    <mat-tab id="jira" mat-label="Jira" mat-icon="/assets/icons/jira.svg" @click="
-        newWindow(
-          'https://derekpedersen.atlassian.net/secure/RapidBoard.jspa?projectKey=DP&rapidView=7'
-        )
-      " exact></mat-tab>
-</mat-tabs>
+<div fxLayout="row" fxLayoutAlign="end">
+    <div fxLayout="row" fxHide="false" fxHide.lt-md fxLayoutAlign="end">
+        <span class="fill-remaining-space"></span>
+        <div fxFlex="10">
+            <a href="https://derekpedersen.github.io/" mat-button target="_blank">
+                <mat-icon svgIcon="github-box"></mat-icon>
+            </a>
+        </div>
+        <div fxFlex="10">
+            <a href="https://www.linkedin.com/in/derek-pedersen-67105415/" mat-button target="_blank">
+                <mat-icon svgIcon="linkedin-box"></mat-icon>
+            </a>
+        </div>
+        <div fxFlex="10">
+            <a href="/api/resume/download" mat-button target="_blank">
+                <mat-icon svgIcon="file-pdf-box"></mat-icon>
+            </a>
+        </div>
+        <!-- currently my bitbucket is empty, so why show it-->
+        <!-- <div fxFlex="10">
+            <a href="https://bitbucket.org/derek-pedersen/" mat-button target="_blank">
+                <mat-icon svgIcon="bitbucket"></mat-icon>
+            </a>
+        </div> -->
+        <!-- not much going on in my visual studio account at the moment, maybe once I get the build runners attached -->
+        <!-- <div fxFlex="10">
+            <a href="https://derek-pedersen.visualstudio.com" mat-button target="_blank">
+                <mat-icon svgIcon="microsoft"></mat-icon>
+            </a>
+        </div> -->
+        <div fxFlex="10">
+            <a href="https://codefights.com/profile/drockem" mat-button target="_blank">
+                <mat-icon svgIcon="codefights"></mat-icon>
+            </a>
+        </div>
+        <div fxFlex="10">
+            <a href="https://www.hackerrank.com/derekpedersen" mat-button target="_blank">
+                <mat-icon svgIcon="hackerrank"></mat-icon>
+            </a>
+        </div>
+        <div fxFlex="10">
+            <a href="https://stackoverflow.com/users/1304353/derek-pedersen" mat-button target="_blank">
+                <mat-icon svgIcon="stackoverflow"></mat-icon>
+            </a>
+        </div>
+        <div fxFlex="10">
+            <a href="https://www.udemy.com/user/derek-pedersen-2/" mat-button target="_blank">
+                <mat-icon svgIcon="udemy"></mat-icon>
+            </a>
+        </div>
+        <div fxFlex="10">
+            <a href="https://hub.docker.com/u/derekpedersen" mat-button target="_blank">
+                <mat-icon svgIcon="docker"></mat-icon>
+            </a>
+        </div>
+        <!-- TODO: need to finish my bot first -->
+        <!-- <div fxFlex="10">
+            <a href="https://twitter.com/pedersenderek" mat-button target="_blank">
+                <mat-icon svgIcon="twitter-box"></mat-icon>
+            </a>
+        </div> -->
+    </div>
+    <button mat-button [mat-menu-trigger-for]="menu" fxShow="false" fxShow.lt-md>
+        <mat-icon>menu</mat-icon>
+    </button>
+</div>
+<mat-menu x-position="before" #menu="matMenu">
+    <div fxLayout="column" fxLayoutGap="10px">
+        <div fxFlexFill>
+            <a href="https://derekpedersen.github.io/" mat-button color="primary" target="_blank">
+                <mat-icon svgIcon="github-box"></mat-icon>
+            </a>
+        </div>
+        <div fxFlexFill>
+            <a href="https://www.linkedin.com/in/derek-pedersen-67105415/" mat-button color="primary" target="_blank">
+                <mat-icon svgIcon="linkedin-box"></mat-icon>
+            </a>
+        </div>
+        <div fxFlexFill>
+            <a href="/api/resume/download" mat-button color="primary" target="_blank">
+                <mat-icon svgIcon="file-pdf-box"></mat-icon>
+            </a>
+        </div>
+        <!-- currently my bitbucket is empty, so why show it-->
+        <!-- <div fxFlexFill>
+            <a href="https://bitbucket.org/derek-pedersen/" mat-button color="primary" target="_blank">
+                <mat-icon svgIcon="bitbucket"></mat-icon>
+            </a>
+        </div> -->
+        <!-- not much going on in my visual studio account at the moment, maybe once I get the build runners attached -->
+        <!-- <div fxFlexFill>
+            <a href="https://derek-pedersen.visualstudio.com" mat-button color="primary" target="_blank">
+                <mat-icon svgIcon="microsoft"></mat-icon>
+            </a>
+        </div> -->
+        <div fxFlexFill>
+            <a href="https://codefights.com/profile/drockem" mat-button color="primary" target="_blank">
+                <mat-icon svgIcon="codefights"></mat-icon>
+            </a>
+        </div>
+        <div fxFlexFill>
+            <a href="https://www.hackerrank.com/derekpedersen" mat-button color="primary" target="_blank">
+                <mat-icon svgIcon="hackerrank"></mat-icon>
+            </a>
+        </div>
+        <div fxFlexFill>
+            <a href="https://stackoverflow.com/users/1304353/derek-pedersen" mat-button color="primary" target="_blank">
+                <mat-icon svgIcon="stackoverflow"></mat-icon>
+            </a>
+        </div>
+        <div fxFlexFill>
+            <a href="https://www.udemy.com/user/derek-pedersen-2/" mat-button color="primary" target="_blank">
+                <mat-icon svgIcon="udemy"></mat-icon>
+            </a>
+        </div>
+        <div fxFlexFill>
+            <a href="https://twitter.com/pedersenderek" mat-button color="primary" target="_blank">
+                <mat-icon svgIcon="twitter-box"></mat-icon>
+            </a>
+        </div>
+    </div>
+</mat-menu>

@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/pedersen.io-pwa-angular'),
+      dir: require('path').join(__dirname, './coverage/pedersen-pwa-angular'),
       subdir: '.',
       reporters: [
         { type: 'html' },
