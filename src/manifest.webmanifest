@@ -2,7 +2,7 @@
   "name": "pedersen.io-spa-angular",
   "short_name": "pedersen.io-spa-angular",
   "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "background_color": "#002878",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
