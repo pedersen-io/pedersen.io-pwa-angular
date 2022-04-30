@@ -1,14 +1,14 @@
-<md-card>
-    <md-card-media-cover md-solid>
-        <md-card-media md-ratio="1:1">
+<mat-card>
+    <mat-card-media-cover mat-solid>
+        <mat-card-media mat-ratio="1:1">
             <img :src="require(`@/assets/${imagefile}`)" />
-        </md-card-media>
-        <md-card-area>
-            <md-card-header> </md-card-header>
-            <md-card-actions>
+        </mat-card-media>
+        <mat-card-area>
+            <mat-card-header> </mat-card-header>
+            <mat-card-actions>
                 {{ propMessage }} |
-                <md-button :href="`${destination}`">{{ name }}</md-button>
-            </md-card-actions>
-        </md-card-area>
-    </md-card-media-cover>
-</md-card>
+                <mat-button :href="`${destination}`">{{ name }}</mat-button>
+            </mat-card-actions>
+        </mat-card-area>
+    </mat-card-media-cover>
+</mat-card>
