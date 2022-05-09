@@ -10,22 +10,10 @@
   margin-left: 5px; /* optional */
 }
 
-.example-spacer {
+.toolbar-row-spacer {
   flex: 1 1 auto;
 }
 
-label {
-  font-size: 0.6rem;
-  font-family: Verdana, sans-serif;
-  border-radius: 15px;
-  padding: 5px;
-  font-weight: bold;
-  color: black;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-}
-
 mat-icon {
-  transform: scale(0.5);
+  transform: scale(1.5);
 }
